@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRS - Quản Lý Sản Phẩm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    ul {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tài Liệu SRS - Hệ Thống Quản Lý Sản Phẩm</h1>
+
+  <h2>1. Mô tả tổng quan</h2>
+  <p>Hệ thống cho phép quản lý sản phẩm với các chức năng: thêm, xem, cập nhật và xóa sản phẩm thông qua các endpoint HTTP theo mô hình RESTful.</p>
+
+  <h2>2. Chức năng chi tiết</h2>
+  <table>
+    <tr>
+      <th>URL</th>
+      <th>Phương thức</th>
+      <th>Chức năng</th>
+    </tr>
+    <tr>
+      <td>/products/add</td>
+      <td>GET</td>
+      <td>Hiển thị form nhập sản phẩm mới.</td>
+    </tr>
+    <tr>
+      <td>/products/add</td>
+      <td>POST</td>
+      <td>Gửi dữ liệu form, thêm sản phẩm vào cơ sở dữ liệu.</td>
+    </tr>
+    <tr>
+      <td>/products</td>
+      <td>GET</td>
+      <td>Hiển thị danh sách tất cả sản phẩm.</td>
+    </tr>
+    <tr>
+      <td>/products/update/{id}</td>
+      <td>GET</td>
+      <td>Hiển thị form cập nhật thông tin sản phẩm theo ID.</td>
+    </tr>
+    <tr>
+      <td>/products/update/{id}</td>
+      <td>POST</td>
+      <td>Cập nhật thông tin sản phẩm theo ID.</td>
+    </tr>
+    <tr>
+      <td>/products/delete/{id}</td>
+      <td>GET</td>
+      <td>Xóa sản phẩm theo ID.</td>
+    </tr>
+  </table>
+
+  <h2>3. Yêu cầu chức năng</h2>
+  <ul>
+    <li>Giao diện đơn giản, dễ sử dụng.</li>
+    <li>Kiểm tra dữ liệu đầu vào khi thêm/cập nhật sản phẩm.</li>
+    <li>Cảnh báo trước khi xóa sản phẩm.</li>
+    <li>Hiển thị thông báo sau mỗi thao tác (thành công/thất bại).</li>
+  </ul>
+
+  <h2>4. Phạm vi</h2>
+  <ul>
+    <li>Dành cho hệ thống nội bộ quản lý sản phẩm.</li>
+    <li>Không bao gồm chức năng phân quyền người dùng.</li>
+  </ul>
+
+</body>
+</html>
